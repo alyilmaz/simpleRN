@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {View, Text, StyleSheet, Image, ActivityIndicator} from 'react-native';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {Ionicons} from '@expo/vector-icons';
 
 class HomeScreen extends Component{
 
@@ -7,6 +8,7 @@ class HomeScreen extends Component{
         super(props);
         this.state = {data: []};
       }
+
  
 
     componentDidMount = () =>{
@@ -21,6 +23,7 @@ class HomeScreen extends Component{
             console.log("error is taken place :", err);
             })
     }
+  
 
     render(){
         return(
@@ -29,12 +32,14 @@ class HomeScreen extends Component{
                      <Image source={{uri: item.img_url}} />
                     console.log(item.img_url)
                 })
-                    
-                        
+                                           
                 }
-                    
-                    
-
+                <TouchableOpacity style= {styles.button} onPress={() =>this.props.navigation.navigate('Data')}>
+                <Ionicons name="home" size= {48} color= '#234567'></Ionicons>
+            </TouchableOpacity>
+            <Text style={styles.one}>One</Text>
+            <Text style={styles.two}>Two</Text>
+            <Text style={styles.three}>Three</Text>
             </View>
         )
     }
@@ -46,6 +51,26 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    button: {
+        marginHorizontal: 30,
+        backgroundColor: '#e9444a',
+        borderRadius: 8,
+        height:52,
+        alignItems:'center',
+        justifyContent: 'center'
+    },
+    one: {
+        padding:10,
+        backgroundColor: 'pink'
+    },
+    two:{
+        padding:10,
+        backgroundColor: 'blue'
+    },
+    three:{
+        padding:10,
+        backgroundColor: 'green'
+    }
 })
 
 export default HomeScreen;

@@ -38,6 +38,13 @@ const DataScreen = (props) =>{
         )
      }
 
+     useEffect(() =>{
+        console.log('Component did mount');
+        return() =>{
+            console.log('Component will unmount!');
+        }
+    },[])
+
     return(
     <View style ={styles.container}>
         <StatusBar barStyle='light-content'></StatusBar>

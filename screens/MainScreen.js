@@ -47,6 +47,15 @@ const styles = StyleSheet.create({
         fontSize: 24,
         marginHorizontal:15,
         marginTop: 24
+    },
+    button: {
+        marginHorizontal: 30,
+        backgroundColor: '#e9444a',
+        borderRadius: 8,
+        height:32,
+        alignItems:'center',
+        justifyContent: 'center',
+        marginBottom: 40
     }
 
 })
