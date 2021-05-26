@@ -6,9 +6,8 @@ const DataScreen = (props) =>{
     const [errorMessage, setErrorMessage] = useState(null);
     const [name, setName] = useState('');
     const [title, setTitle] = useState('');
-    const [data, setData] = useState([{name: 'Ali', title: 'Q&A'},
-                                    {name: 'Huso', title: 'SW'},
-                                    {name: 'Nazmi', title: 'HW'}]);
+    const [data, setData] = useState([{name: 'Sefer', title: 'Q&A'},
+                                    {name: 'Nazmi', title: 'SW'}]);
                     
 
     const handleAdd = () =>{
@@ -48,7 +47,7 @@ const DataScreen = (props) =>{
     return(
     <View style ={styles.container}>
         <StatusBar barStyle='light-content'></StatusBar>
-        <Text style={styles.greeting}>{`Hello world\n Welcome dude`}</Text>
+        <Text style={styles.greeting}>{`Welcome to React Native Session\n Swisscom Team`}</Text>
         <View style={styles.errorMessage} >
             {errorMessage && <Text style={styles.error}>{errorMessage}</Text>}
         </View>
@@ -87,7 +86,7 @@ const styles = StyleSheet.create({
         marginTop:32,
         fontSize: 18,
         fontWeight: '400',
-        textAlign: 'center'
+        textAlign: 'center',
     },
     errorMessage: {
         height: 72,
